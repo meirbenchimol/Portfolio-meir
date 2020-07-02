@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meir Website</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/bootstrap-grid.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/bootstrap-reboot.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/separator.css" type="text/css">
+    <link rel="stylesheet" href="../css/nav-style.css" type="text/css">
+    <link rel="stylesheet" href="../css/modale.css" type="text/css">
+
+    <script src="../js/jQuerry.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/6b89b99001.js" crossorigin="anonymous"></script>
+    <script src="../js/modal.js"></script>
+
+    <!--    <script src="dist/ssm.min.js"></script>-->
+
+<body>
+
+<div class="header"></div>
+
+<section id="home" class="home">
+    <h2>Hello I'm <strong class="c-green">Meir </strong><br> I am Full-Stack Developer <br>from Jerusalem. </h2>
+    <button type="button" class="btn btn-green " onclick="location.href='#portfolio'">View more </button>
+</section>
+
+<svg class="editorial"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 24 150 28 "
+     preserveAspectRatio="none">
+    <defs>
+        <path id="gentle-wave"
+              d="M-160 44c30 0
+    58-18 88-18s
+    58 18 88 18
+    58-18 88-18
+    58 18 88 18
+    v44h-352z" />
+    </defs>
+    <g class="parallax1">
+        <use xlink:href="#gentle-wave" x="50" y="3" fill="#2F2C27"/>
+    </g>
+    <g class="parallax2">
+        <use xlink:href="#gentle-wave" x="50" y="0" fill="#A8D10F"/>
+    </g>
+    <g class="parallax3">
+        <use xlink:href="#gentle-wave" x="50" y="9" fill="#2F2C27"/>
+    </g>
+    <g class="parallax4">
+        <use xlink:href="#gentle-wave" x="50" y="6" fill="#EDEAE1"/>
+    </g>
+</svg>
+
+<section id="portfolio" class="portfolio ">
+    <h3 class="c-gray2 text-center">PORTFOLIO</h3>
+
+    <div class="row row-cols-1 row-cols-md-3 justify-content-md-center p-lg-3">
+        <div class="col mb-4">
+            <div class="card anim-shadow">
+                <img src="../images/site1a.png" class="card-img-top p-2" alt="site1">
+                <div class="card-body">
+<!--                    <span class="in-dev">-->
+<!--                        <ion-icon name="construct-outline"></ion-icon>-->
+<!--                        <h5> In development</h5>-->
+<!--                    </span>-->
+
+                    <button type="button" class="btn btn-green-bold " onclick="openModal();setIdProject('project1');currentSlide(1);">Preview </button>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card anim-shadow">
+                <img src="../images/site2a.png" class="card-img-top p-2" alt="site2">
+                <div class="card-body">
+<!--                    <span class="in-dev">-->
+<!--                        <ion-icon name="construct-outline"></ion-icon>-->
+<!--                        <h5> In development</h5>-->
+<!--                    </span>-->
+
+                    <button type="button" class="btn btn-green-bold " onclick="openModal();setIdProject('project2');currentSlide(1);">Preview </button>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card anim-shadow">
+                <img src="../images/site3a.png" class="card-img-top p-2" alt="site3">
+                <div class="card-body ">
+<!--                    <span class="in-dev">-->
+<!--                        <ion-icon name="construct-outline"></ion-icon>-->
+<!--                        <h5> In development</h5>-->
+<!--                    </span>-->
+
+                    <button type="button" class="btn btn-green-bold " onclick="openModal();setIdProject('project3');currentSlide(1);">Preview </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+<!--    modal for view more  -->
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+            <div id="project1">
+                <div class="mySlides">
+                    <img src="../images/site1a.png" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <img src="../images/site1b.png" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="../images/site1c.png" style="width:100%">
+                </div>
+            </div>
+            <div id="project2">
+                <div class="mySlides">
+                    <img src="../images/site2.png" style="width:100%">
+                </div>
+
+            </div>
+            <div id="project3">
+                <div class="mySlides">
+                    <img src="../images/site3a.png" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <img src="../images/site3b.png" style="width:100%">
+                </div>
+
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+
+
+<!--    <div class="skew-c"></div>-->
+
+</section>
+
+<section id="about" class="about">
+
+    <h3 class="text-center" > About Me </h3>
+
+    <div class="desc">
+        <p>I'm software engineer with deep knowledges of various programming languages. Highly motivated,
+            I am looking for a serious job where I can contribute my skills, perform and improve my capacities in
+            the IT field.</p>
+    </div>
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="d-block w-100 imgCarouselContainer" >
+                    <img class=" imgcarousel" src="../images/HTML5.jpg" alt="First slide">
+                    <img class="d-block w-100 imgcarousel" src="../images/css2.jpeg" alt="First slide">
+                    <img class="d-block w-100 imgcarousel imgMobile" src="../images/js.png" alt="First slide">
+                    <img class="d-block w-100 imgcarousel imgMobile" src="../images/bootstrap.png" alt="First slide">
+                </div>
+            </div>
+            <div class="carousel-item-mobile hide " >
+                <div class="d-block w-100 imgCarouselContainer" >
+                    <img class="d-block w-100 imgcarousel" src="../images/js.png" alt="3 slide">
+                    <img class="d-block w-100 imgcarousel" src="../images/bootstrap.png" alt="First slide">
+                </div>
+            </div>
+            <div class="carousel-item ">
+                <div class="d-block w-100 imgCarouselContainer" >
+                    <img class="d-block w-100 imgcarousel" src="../images/jquerys.jpg" alt="Second slide">
+                    <img class="d-block w-100 imgcarousel" src="../images/angular2.png" alt="Second slide">
+                    <img class="d-block w-100 imgcarousel imgMobile" src="../images/nodejs.jpg" alt="Second slide">
+                    <img class="d-block w-100 imgcarousel imgMobile" src="../images/android.png" alt="Second slide">
+                </div>
+            </div>
+            <div class="carousel-item-mobile hide ">
+                <div class="d-block w-100 imgCarouselContainer" >
+                    <img class="d-block w-100 imgcarousel" src="../images/nodejs.jpg" alt="4 slide">
+                    <img class="d-block w-100 imgcarousel" src="../images/android.png" alt="4 slide">
+                </div>
+            </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+<!--    <div class="skew-cc"></div>-->
+</section>
+
+
+<section class="comments">
+    <div class="comments-container">
+        <img src="../images/eyal.png" class="" alt="">
+        <div class="comment">
+            <p>"I am sure that his intensive experience, together with his extraordinary abilities, will lead not only
+                to his success in any development team he might participate, but will also contribute to the company and
+                the other participants. It is with great confidence that I recommend Meir."</p>
+            <h6>-- Eyal M. [<a href="https://bettertrader.co/">bettertrader.co</a>]</h6>
+        </div>
+    </div>
+    <div class="rows">
+        <div>
+            <svg id="" preserveAspectRatio="xMidYMax meet" class="svg-separator sep12" viewBox="0 0 1600 200" style="display: block;" data-height="200">
+                <polygon class="" style="fill: #2F2C27;" points="-4,24 800,198 1604,24 1604,204 -4,204 "></polygon>
+                <polygon class="" style="opacity: 1;fill: #95a5a6;" points="-4,0 800,198 1604,0 1604,11.833 800,198 -4,12 "></polygon>
+                <polygon class="" style="opacity: 1;fill: #A8D10F;" points="-4,12 -4,24 800,198 1604,24 1604,11.833 800,198 "></polygon></svg>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h3>Get In Touch</h3>
+    <p>You want work with me </p>
+
+    <form method="post" action="action-mail.php" class="contact-form">
+        <div class="form-group row " >
+
+            <label for="name" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="name" name="name" value="" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+                <input type="email"  class="form-control" id="email" name="email" value="">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="message" class="col-sm-2 col-form-label">Message</label>
+            <div class="col-sm-10">
+                <textarea type="text" class="form-control" id="message" name="message"></textarea>
+            </div>
+        </div>
+        <button class="btn btn-green" type="submit">Submit form</button>
+
+    </form>
+
+</section>
+
+<footer>
+
+    <div class="footer-link">
+        <a href="mailto:meirbenchimol@gmail.com"><i class="far fa-envelope fa-lg links"></i></a>
+        <a href="https://www.linkedin.com/in/meir-ben-chimol-b45a46141" target="_blank"><i class="fab fa-linkedin-in fa-lg links"></i></a>
+        <a href="https://github.com/meirbenchimol" target="_blank"><i class="fab fa-github fa-lg links"></i></a>
+        <div class="popup">
+            <a href="../mycv.pdf" target="_self" download><i class="fas fa-file-pdf fa-lg links cv-link"></i></a>
+            <span class="popuptext" id="myPopup">This is my CV !</span>
+        </div>
+
+
+    </div>
+    <p>© 2020 Meir Benchimol. All rights reserved.</p>
+
+</footer>
+
+
+</body>
+
+<script type="text/javascript">
+    $(function() {
+        $(".header").load("header.html");
+    });
+
+    // When the user hover on link, open the popup
+    $(".cv-link").hover(
+    function myFunction() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+    });
+
+
+    // script for responsive
+    var elements = document.getElementsByClassName("carousel-item-mobile");
+
+    function updateUiResponsive(){
+        const sizeWidth = window.innerWidth;
+        if (sizeWidth <= 600) {
+            for(let item of elements){ //ES6
+                item.classList.remove("hide");
+                item.classList.add("carousel-item");
+            }
+
+        } else  {
+            for(let item of elements){ //ES6
+                item.classList.add("hide");
+                item.classList.remove("carousel-item");
+            }
+
+        }
+    }
+    this.updateUiResponsive();
+
+
+    window.addEventListener('resize', updateUiResponsive);
+
+
+</script>
+
+
+</html>
